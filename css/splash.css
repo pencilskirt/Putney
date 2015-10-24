@@ -1,0 +1,14 @@
+
+/********************************************
+Splash page only
+*********************************************/
+
+
+body {    
+   font-family: Helvetica;  
+   margin: 0px; /*needs to be zero for no white space*/
+   height: 100%;
+   width: 100%; /* width needed for Firefox */
+   background: url('../img/casein/slide133.jpg') top center no-repeat;
+   background-size: cover;
+}

@@ -1,0 +1,23 @@
+body {    
+   font-family: Helvetica;  
+   margin: 0px; /*needs to be zero for no white space*/
+   height: 100%;
+   width: 100%; /* width needed for Firefox */
+   background: url('../img/neutral.jpg');
+   background-repeat: repeat;
+
+}
+
+.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
