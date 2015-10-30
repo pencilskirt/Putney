@@ -1,5 +1,7 @@
 .lb-album{
-	width: 900px;
+	  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 	margin: 0 auto;
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 }
@@ -76,9 +78,11 @@
 	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(27, 33, 37, 0.72) 100%);
 }
 .lb-overlay > div{
+	display: flex;
+	align-items: center;
 	position: relative;
 	color: rgba(27,54,81,0.8);
-	width: 550px;
+	/*width: 550px;*/
 	height: 80px;
 	margin: 40px auto 0px auto;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
@@ -135,6 +139,8 @@
 .lb-overlay img{
 	/* height: 100%; For Opera max-height does not seem to work */
 	max-height: 100%;
+	max-width: 100%; /*//change*/
+	max-height: 90%; /*//change*/
 	position: relative;
 	opacity: 0;
 	filter: alpha(opacity=0); /* internet explorer */
