@@ -70,15 +70,16 @@
 	z-index: 99;
 	text-align: center;
 	background: rgba(3, 6, 8, 0.8) 100%);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(27, 33, 37, 0.72) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(27, 33, 37, 0.72)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(27, 33, 37, 0.72) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(27, 33, 37, 0.72) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(27, 33, 37, 0.72) 100%);
-	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(27, 33, 37, 0.72) 100%);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%, rgba(27, 33, 37, 0.9) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.9)), color-stop(100%,rgba(27, 33, 37, 0.9)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%,rgba(27, 33, 37, 0.9) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%,rgba(27, 33, 37, 0.9) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%,rgba(27, 33, 37, 0.9) 100%);
+	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.9) 0%,rgba(27, 33, 37, 0.9) 100%);
 }
 .lb-overlay > div{
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	position: relative;
 	color: rgba(27,54,81,0.8);
@@ -94,7 +95,7 @@
 	height: 60px;
 }
 .lb-overlay div h3{
-	font-size: 36px;
+	font-size: 30px;
 	float: left;
 	text-align: right;
 	border-right: 1px solid rgba(27,54,81,0.4);
@@ -113,7 +114,7 @@
 	font-size: 14px;
 	text-align: left;
 	float: left;
-	width: 260px;
+	/*width: 260px;*/
 }
 .lb-overlay a.lb-close{
 	background: rgba(27,54,81,0.8);
@@ -138,9 +139,8 @@
 }
 .lb-overlay img{
 	/* height: 100%; For Opera max-height does not seem to work */
-	max-height: 100%;
 	max-width: 100%; /*//change*/
-	max-height: 90%; /*//change*/
+	max-height: 100%; /*//change*/
 	position: relative;
 	opacity: 0;
 	filter: alpha(opacity=0); /* internet explorer */
@@ -183,7 +183,7 @@
 	height: auto;
 	bottom: 0px;
 	right: 0px;
-	padding: 80px 100px 120px 100px;
+	padding: 90px 100px 120px 100px;
 }
 .lb-overlay:target img,
 .lb-overlay:target a.lb-close{
@@ -198,3 +198,86 @@
 x:-o-prefocus, .lb-overlay img {
     height: 100%;
 }
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+	.container > header{
+		text-align: center;
+	}
+	p.codrops-demos {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+
+	.codrops-top {
+		font-size: .5rem;
+	}
+
+
+/*	.lb-overlay {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+	}*/
+
+	.lb-overlay > div {
+		flex: display;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin: 55px 0 0 0;
+	}
+
+	.lb-overlay div h3,
+	.lb-overlay div p{
+	padding: 0px 20px;
+	width: 200px;
+	height: 60px;
+	}
+
+	.lb-overlay div h3 {
+		font-size: 28px;
+		border-right: none;
+		text-align: center;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		width: auto;
+	}
+
+	.lb-overlay div h3 span {
+		line-height: 12px;
+	}
+
+	.lb-overlay div p {
+		text-align: center;
+		float: none;
+	}
+
+	.lb-overlay div h3 span,
+	.lb-overlay div p{
+	 	font-size: 14px;
+	 	
+		 }
+}
+
+@media screen and (max-width: 580px) {
+	.lb-overlay div h3 {
+		font-size: 22px;
+		border-right: none;
+		text-align: center;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		width: auto;
+	}
+
+
+	.lb-overlay div h3 span,
+	.lb-overlay div p{
+	 	font-size: 12px;
+	 	padding-top: 5px;
+		 }
+
+	}

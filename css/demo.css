@@ -184,15 +184,3 @@ p.codrops-demos a.current-demo,
 p.codrops-demos a.current-demo:hover{
 	color: #999;
 }
-/* Media Queries */
-@media screen and (max-width: 767px) {
-	.container > header{
-		text-align: center;
-	}
-	p.codrops-demos {
-		position: relative;
-		top: auto;
-		left: auto;
-	}
-
-}
